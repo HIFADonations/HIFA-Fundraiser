@@ -113,14 +113,14 @@
       { name: 'ONG YU SHAWN', amount: 0.10 },
       { name: 'TENG POH HENG', amount: 0.03  },
       { name: 'KHOR MING HONG', amount: 0.01 },
-      { name: '', amount:  }
+      
     ];
 
     // Sort donors by amount descending
     donors.sort((a, b) => b.amount - a.amount);
 
     // Calculate total raised
-    const raisedAmt = donors.reduce((sum, d) => sum + d.amount, 3.11 );
+    const raisedAmt = donors.reduce((sum, d) => sum + d.amount, 0 );
 
     // Update numbers in UI
     document.getElementById('raised').innerText = raisedAmt.toFixed(2);
