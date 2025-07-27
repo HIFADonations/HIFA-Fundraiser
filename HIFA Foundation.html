@@ -131,12 +131,14 @@
     document.getElementById('bar').style.width = percent + '%';
 
     // Add top donors to list
-    const donorList = document.getElementById('donorList');
-    donors.forEach(d => {
-      const li = document.createElement('li');
-      li.textContent = `${d.name} — RM ${d.amount.toFixed(2)}`;
-      donorList.appendChild(li);
-    });
+   // Add only top 5 donors to the list
+const donorList = document.getElementById('donorList');
+donors.slice(0, 5).forEach(d => {
+  const li = document.createElement('li');
+  li.textContent = `${d.name} — RM ${d.amount.toFixed(2)}`;
+  donorList.appendChild(li);
+});
+
   </script>
 </body>
 </html>
